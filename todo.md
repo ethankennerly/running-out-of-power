@@ -4,8 +4,8 @@
 - [x] Jason plays Shopping Cart Hero, Learn 2 Fly.
 - [x] Circle falls onto plane.
 - [x] Circle moves across screen.
-- [ ] Tap to add force.
-- [ ] See fuel meter deplete.
+- [x] Tap to add force.
+- [ ] See fuel meter deplete and disable force.
 - [ ] Force depletes with fuel.
 - [ ] Rocket image.
 - [ ] See distance in milestones.

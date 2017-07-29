@@ -3,15 +3,16 @@ using UnityEngine;
 [RequireComponent(typeof(ConstantForce2D))]
 public sealed class InputController : MonoBehaviour
 {
-	public ConstantForce2D force;
+	public Thruster thruster = new Thruster();
 
 	private void Start()
 	{
-		force = gameObject.GetComponent<ConstantForce2D>();
+		thruster.force = gameObject.GetComponent<ConstantForce2D>();
 	}
 
 	private void Update()
 	{
-		force.enabled = Input.GetMouseButton(0);
+		thruster.enabled = Input.GetMouseButton(0);
+		thruster.Update();
 	}
 }
