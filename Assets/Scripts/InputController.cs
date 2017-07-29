@@ -8,6 +8,7 @@ public sealed class InputController : MonoBehaviour
 	private void Start()
 	{
 		thruster.force = gameObject.GetComponent<ConstantForce2D>();
+		thruster.Setup();
 	}
 
 	private void Update()
