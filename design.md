@@ -1,6 +1,14 @@
+# Ideas
+
+North Korea launching intercontinental ballistic missiles.
+
+As North Korea is running out of power.
+
+
+
 # Reference games brainstormed
 
-Shopping Cart Hero:  Upgrades.
+Learn 2 Fly / Shopping Cart Hero:  Upgrades.
 	Airplane.  Upgrade and try to fly as far as you can.
 		Simplified Kerbal Space Program.
 		Rocket or airplane that propels.
