@@ -10,10 +10,11 @@
 - [x] Force depletes with fuel.
 - [x] Particle system displays exhaust.
 - [x] Particles scale down with force.
+- [x] See distance milestones.
+- [ ] Restart.
 - [ ] Physics of exhaust in nozzle.
 - [ ] Rocket image.
 - [ ] Vary angular drag.
-- [ ] See distance in milestones.
 - [ ] Earn money for distance.
 - [ ] Choose starting angle.
 - [ ] Tap to tilt direction.
