@@ -12,7 +12,7 @@
 - [x] Particles scale down with force.
 - [x] See distance milestones.
 - [x] Read:  Tap quickly to propel.
-- [ ] Restart.
+- [x] After stopped, read: distance.
 - [ ] Physics of exhaust in nozzle.
 - [ ] Rocket image.
 - [ ] Vary angular drag.

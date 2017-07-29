@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(ConstantForce2D))]
 public sealed class InputController : MonoBehaviour
 {
+	public GameObject result;
 	public Thruster thruster = new Thruster();
 
 	private void Start()
@@ -14,6 +15,12 @@ public sealed class InputController : MonoBehaviour
 	private void Update()
 	{
 		thruster.isActive = Input.GetMouseButtonDown(0);
+		UpdateGameOver();
 		thruster.Update(Time.deltaTime);
+	}
+
+	private void UpdateGameOver()
+	{
+		result.SetActive(!thruster.hasFuel);
 	}
 }
