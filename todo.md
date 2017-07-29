@@ -11,6 +11,7 @@
 - [x] Particle system displays exhaust.
 - [x] Particles scale down with force.
 - [x] See distance milestones.
+- [x] Read:  Tap quickly to propel.
 - [ ] Restart.
 - [ ] Physics of exhaust in nozzle.
 - [ ] Rocket image.
@@ -27,6 +28,7 @@
 - [ ] Particles of thrust.
 - [ ] Fireworks on landing.
 - [ ] Drone.
+- [ ] Rapid tap to thrust.
 - [ ] Tilt phone to tilt projectile.
 - [ ] Do flips.
 - [ ] Hot air balloon.

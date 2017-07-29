@@ -8,6 +8,7 @@ public sealed class Thruster
 	public bool isEnabled = true;
 	[Range(0.0f, 5.0f)]
 	public float fuel = 5.0f;
+	public float forceRatio = 1.0f;
 	public float baseFuel;
 	public float fuelRate = -1.0f;
 	public float fuelRatio = 1.0f;
@@ -61,7 +62,7 @@ public sealed class Thruster
 
 	private void UpdateForce()
 	{
-		float efficiency = isEnabled ? fuelRatio : 0.0f;
+		float efficiency = isEnabled ? forceRatio : 0.0f;
 		Vector2 relativeForce = efficiency * baseForce;
 		force.relativeForce = relativeForce;
 	}
@@ -75,7 +76,7 @@ public sealed class Thruster
 
 			ParticleSystem.SizeOverLifetimeModule size = particles.sizeOverLifetime;
 			size.enabled = true;
-			size.sizeMultiplier = fuelRatio;
+			size.sizeMultiplier = forceRatio;
 		}
 	}
 }
