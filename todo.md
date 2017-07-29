@@ -3,9 +3,11 @@
 - [x] Brainstorm 40 ideas.
 - [x] Jason plays Shopping Cart Hero, Learn 2 Fly.
 - [x] Circle falls onto plane.
-- [ ] Circle moves across screen.
+- [x] Circle moves across screen.
 - [ ] Tap to add force.
 - [ ] See fuel meter deplete.
+- [ ] Force depletes with fuel.
+- [ ] Rocket image.
 - [ ] See distance in milestones.
 - [ ] Earn money for distance.
 - [ ] Choose starting angle.
@@ -17,4 +19,5 @@
 - [ ] Skip off of ground.
 - [ ] Drop stage of rocket.
 - [ ] Upgrade lift (anti-gravity).
+- [ ] Camera follow from standard assets.
 - [ ] Animate money particles collected over distance.
