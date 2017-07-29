@@ -5,8 +5,9 @@
 - [x] Circle falls onto plane.
 - [x] Circle moves across screen.
 - [x] Tap to add force.
+- [x] Circles slide off ramp, stop on ground.
 - [ ] See fuel meter deplete and disable force.
-- [ ] Force depletes with fuel.
+- [x] Force depletes with fuel.
 - [ ] Rocket image.
 - [ ] See distance in milestones.
 - [ ] Earn money for distance.
@@ -16,8 +17,33 @@
 - [ ] Upgrade bursts.
 - [ ] Go pass clouds.
 - [ ] Upgrade mass.
+- [ ] Animate collecting coin with distance.
 - [ ] Skip off of ground.
+- [ ] Particles of thrust.
+- [ ] Fireworks on landing.
+- [ ] Drone.
+- [ ] Tilt phone to tilt projectile.
+- [ ] Do flips.
+- [ ] Hot air balloon.
+- [ ] Fireworks on landing by distance.
+- [ ] Fireworks on passing checkpoint.
+- [ ] Model relative force and stabilizer.
+- [ ] Multi stage fireworks.
 - [ ] Drop stage of rocket.
+- [ ] 3D blocks.
+- [ ] Force is applied per propellant particle.
+- [ ] Wings.
+- [ ] Model atmospheric drag.
+- [ ] Wall of coins.
+- [ ] Background reference landscape for sense of scale.
+- [ ] Zoom out to get a sense of scale.
+- [ ] Tap rapidly to thrust.
+- [ ] Ramp.
+- [ ] Attach upgrades to rocket.  They modify mass.
+- [ ] Detach upgrades from rocket.
 - [ ] Upgrade lift (anti-gravity).
 - [ ] Camera follow from standard assets.
 - [ ] Animate money particles collected over distance.
+- [ ] Landing safely. <http://phet.colorado.edu/sims/lunar-lander/lunar-lander_en.html>
+- [ ] Avoid obstacles, as in Flappy Bird.
+- [ ] Theme park in North Korea.
