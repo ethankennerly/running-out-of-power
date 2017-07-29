@@ -35,11 +35,7 @@ public sealed class Thruster
 		isEnabled = isActive && hasFuel;
 		UpdateForce();
 		force.enabled = isEnabled;
-		if (particles != null)
-		{
-			ParticleSystem.EmissionModule em = particles.emission;
-			em.enabled = isEnabled;
-		}
+		UpdateParticles();
 	}
 
 	private void UpdateFuelAmount(float deltaTime)
@@ -68,5 +64,18 @@ public sealed class Thruster
 		float efficiency = isEnabled ? fuelRatio : 0.0f;
 		Vector2 relativeForce = efficiency * baseForce;
 		force.relativeForce = relativeForce;
+	}
+
+	private void UpdateParticles()
+	{
+		if (particles != null)
+		{
+			ParticleSystem.EmissionModule emission = particles.emission;
+			emission.enabled = isEnabled;
+
+			ParticleSystem.SizeOverLifetimeModule size = particles.sizeOverLifetime;
+			size.enabled = true;
+			size.sizeMultiplier = fuelRatio;
+		}
 	}
 }

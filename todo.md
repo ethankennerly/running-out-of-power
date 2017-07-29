@@ -9,7 +9,7 @@
 - [x] See fuel meter deplete and disable force.
 - [x] Force depletes with fuel.
 - [x] Particle system displays exhaust.
-- [ ] Particle system visualizes force.
+- [x] Particles scale down with force.
 - [ ] Physics of exhaust in nozzle.
 - [ ] Rocket image.
 - [ ] Vary angular drag.
