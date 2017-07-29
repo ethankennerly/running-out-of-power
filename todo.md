@@ -8,7 +8,10 @@
 - [x] Circles slide off ramp, stop on ground.
 - [ ] See fuel meter deplete and disable force.
 - [x] Force depletes with fuel.
+- [x] Particle system displays exhaust.
+- [ ] Particle system visualizes force.
 - [ ] Rocket image.
+- [ ] Vary angular drag.
 - [ ] See distance in milestones.
 - [ ] Earn money for distance.
 - [ ] Choose starting angle.

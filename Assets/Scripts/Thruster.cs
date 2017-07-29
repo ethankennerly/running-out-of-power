@@ -14,6 +14,8 @@ public sealed class Thruster
 	public ConstantForce2D force;
 	public Vector2 baseForce = new Vector2();
 
+	public ParticleSystem particles;
+
 	public void Setup()
 	{
 		baseFuel = fuel;
@@ -33,6 +35,11 @@ public sealed class Thruster
 		}
 		UpdateForce();
 		force.enabled = isEnabled;
+		if (particles != null)
+		{
+			ParticleSystem.EmissionModule em = particles.emission;
+			em.enabled = isEnabled;
+		}
 	}
 
 	private void UpdateForce()
