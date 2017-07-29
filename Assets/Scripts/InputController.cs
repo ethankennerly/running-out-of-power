@@ -12,7 +12,7 @@ public sealed class InputController : MonoBehaviour
 
 	private void Update()
 	{
-		thruster.enabled = Input.GetMouseButton(0);
-		thruster.Update();
+		thruster.isActive = Input.GetMouseButton(0);
+		thruster.Update(Time.deltaTime);
 	}
 }
