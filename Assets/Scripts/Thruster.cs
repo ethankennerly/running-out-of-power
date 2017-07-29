@@ -6,7 +6,6 @@ public sealed class Thruster
 	public bool isActive = false;
 	public bool hasFuel = true;
 	public bool isEnabled = true;
-	[Range(0.0f, 5.0f)]
 	public float fuel = 5.0f;
 	public float forceRatio = 1.0f;
 	public float baseFuel;
@@ -58,6 +57,7 @@ public sealed class Thruster
 		Vector3 scale = fuelObject.transform.localScale;
 		scale.y = fuelRatio * baseFuelScale.y;
 		fuelObject.transform.localScale = scale;
+		fuelObject.SetActive(fuelRatio > 0.0f);
 	}
 
 	private void UpdateForce()

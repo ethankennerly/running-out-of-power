@@ -13,6 +13,7 @@
 - [x] See distance milestones.
 - [x] Read:  Tap quickly to propel.
 - [x] After stopped, read: distance.
+- [x] Fuel object offsets center of mass.
 - [ ] Physics of exhaust in nozzle.
 - [ ] Rocket image.
 - [ ] Vary angular drag.
