@@ -10,6 +10,7 @@
 - [x] Force depletes with fuel.
 - [x] Particle system displays exhaust.
 - [ ] Particle system visualizes force.
+- [ ] Physics of exhaust in nozzle.
 - [ ] Rocket image.
 - [ ] Vary angular drag.
 - [ ] See distance in milestones.
