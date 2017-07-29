@@ -13,7 +13,7 @@ public sealed class InputController : MonoBehaviour
 		thruster.Setup();
 	}
 
-	private void Update()
+	public void Update()
 	{
 		thruster.isActive = Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space);
 		UpdateGameOver();

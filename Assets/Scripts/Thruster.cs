@@ -7,6 +7,7 @@ public sealed class Thruster
 	public bool hasFuel = true;
 	public bool isEnabled = true;
 	public bool isExhausted = false;
+	public bool isExhaustedNow = false;
 	public float fuel = 5.0f;
 	public float forceRatio = 1.0f;
 	public float baseFuel;
@@ -19,6 +20,7 @@ public sealed class Thruster
 	public Vector2 baseForce = new Vector2();
 
 	public Rigidbody2D body;
+	public int distance;
 
 	public ParticleSystem particles;
 
@@ -35,11 +37,12 @@ public sealed class Thruster
 
 	public void Update(float deltaTime)
 	{
-		UpdateIsExhausted();
 		UpdateFuelAmount(deltaTime);
+		UpdateIsExhausted();
 		UpdateFuelObject();
 		UpdateForce();
 		force.enabled = isEnabled;
+		distance = (int)body.position.x;
 		UpdateParticles();
 	}
 
@@ -93,9 +96,11 @@ public sealed class Thruster
 
 	public void UpdateIsExhausted()
 	{
+		isExhaustedNow = false;
 		if (!isExhausted)
 		{
 			isExhausted = !hasFuel && body.velocity.sqrMagnitude <= 0.001f;
+			isExhaustedNow = isExhausted;
 		}
 	}
 }

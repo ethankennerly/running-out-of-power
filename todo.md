@@ -14,10 +14,11 @@
 - [x] Read:  Tap quickly to propel.
 - [x] After stopped, read: distance.
 - [x] Fuel object offsets center of mass.
-- [ ] Upgrade fuel
-- [ ] Physics of exhaust in nozzle.
+- [ ] Convert distance into coins.
+- [ ] Upgrade fuel.
 - [ ] Rocket image.
-- [ ] Vary angular drag.
+- [ ] Upgrade angular drag and linear drag.
+- [ ] Upgrade nose cone.
 - [ ] Earn money for distance.
 - [ ] Choose starting angle.
 - [ ] Tap to tilt direction.
@@ -43,6 +44,7 @@
 - [ ] Force is applied per propellant particle.
 - [ ] Wings.
 - [ ] Model atmospheric drag.
+- [ ] Physics of exhaust in nozzle.
 - [ ] Wall of coins.
 - [ ] Background reference landscape for sense of scale.
 - [ ] Zoom out to get a sense of scale.
