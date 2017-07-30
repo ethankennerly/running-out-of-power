@@ -3,6 +3,7 @@ using System.Collections.Generic;
 public sealed class Shop
 {
 	public string fuelPart = "Fuels";
+	public string bodyPart = "Bodies";
 
 	public string selectedMenu;
 
@@ -15,9 +16,16 @@ public sealed class Shop
 	public void Setup()
 	{
 		menuNames.Clear();
-		menuNames.Add(fuelPart);
 
 		menus.Clear();
+		AddFuelsMenu();
+		AddBodiesMenu();
+
+		inventory = Main.instance.inventory;
+	}
+
+	private void AddFuelsMenu()
+	{
 		List<Upgrade> fuels = new List<Upgrade>();
 		Upgrade fuel;
 
@@ -38,8 +46,32 @@ public sealed class Shop
 		fuels.Add(fuel);
 
 		menus.Add(fuelPart, fuels);
+		menuNames.Add(fuelPart);
+	}
 
-		inventory = Main.instance.inventory;
+	private void AddBodiesMenu()
+	{
+		List<Upgrade> bodies = new List<Upgrade>();
+		Upgrade body;
+
+		body = new Upgrade();
+		body.part = bodyPart;
+		body.name = "Glass";
+		body.cost = 0;
+		body.description = "Thick and heavy.";
+		body.prefab = bodyPart + "/Glass";
+		bodies.Add(body);
+
+		body = new Upgrade();
+		body.part = bodyPart;
+		body.name = "Aluminum";
+		body.cost = 10;
+		body.description = "Thin and light.";
+		body.prefab = bodyPart + "/Aluminum";
+		bodies.Add(body);
+
+		menus.Add(bodyPart, bodies);
+		menuNames.Add(bodyPart);
 	}
 
 	public Upgrade GetEquipped(string part)

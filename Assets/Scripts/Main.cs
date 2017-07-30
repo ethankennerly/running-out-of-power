@@ -4,7 +4,8 @@ public sealed class Main
 {
 	public static Main instance = new Main();
 
-	public FuelSelector fuel;
+	public MainView view;
+	public RocketSelector rocket;
 	public InputController input;
 	public Inventory inventory = new Inventory();
 	public Shop shop = new Shop();
@@ -13,16 +14,23 @@ public sealed class Main
 	{
 		inventory.Setup();
 		shop.Setup();
-		input.thruster.fuel = fuel.Replace();
+		input = rocket.Replace();
 		input.Setup();
 	}
 
-	public void Update()
+	public void Update(float deltaTime)
+	{
+		input.UpdateTime(deltaTime);
+		UpdateGameOver();
+	}
+
+	private void UpdateGameOver()
 	{
 		if (input.thruster.isExhaustedNow)
 		{
 			inventory.Add(inventory.coins, input.thruster.distance);
 			inventory.Upgrade(inventory.longest, input.thruster.distance);
+			view.result.SetActive(true);
 		}
 	}
 }

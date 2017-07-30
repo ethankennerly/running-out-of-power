@@ -24,6 +24,10 @@ Prefab:
 - sprite
 - particles
 
+<https://en.wikipedia.org/wiki/Rocket_propellant>
+
+<https://www.grc.nasa.gov/www/k-12/TRC/Rockets/history_of_rockets.html>
+
 # Reference rocket games
 
 Learn 2 Fly 2

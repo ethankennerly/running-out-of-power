@@ -15,14 +15,17 @@
 - [x] After stopped, read: distance.
 - [x] Fuel object offsets center of mass.
 - [x] Convert distance into coins.
-- [ ] Upgrade fuel.
-- [ ] Rocket image.
-- [ ] Upgrade angular drag and linear drag.
-- [ ] Upgrade nose cone.
-- [ ] Earn money for distance.
-- [ ] Choose starting angle.
-- [ ] Tap to tilt direction.
-- [ ] Upgrade fuel type.
+- [x] Earn money for distance.
+- [x] Upgrade fuel.
+- [ ] Upgrade body density and color.  Glass.  Aluminum.
+- [ ] Upgrade nose cone:  angular drag and linear drag.
+- [ ] Upgrade fins:  angular drag and linear drag.
+- [ ] Upgrades:  Rocket image.
+- [ ] Upgrade ramp:  Starting angle.
+- [ ] Upgrade engine:  Fuel efficiency.
+- [ ] Upgrade nozzle:  Thrust.
+- [ ] Gimbal nozzle:  Tap to tilt direction.
+- [ ] Upgrade fuel constant burn.
 - [ ] Upgrade bursts.
 - [ ] Go pass clouds.
 - [ ] Upgrade mass.
