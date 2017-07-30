@@ -7,6 +7,7 @@ public sealed class Inventory
 
 	public Dictionary<string, int> items = new Dictionary<string, int>();
 	public Dictionary<string, int> adds = new Dictionary<string, int>();
+	public Dictionary<string, string> equips = new Dictionary<string, string>();
 
 	public void Setup()
 	{
@@ -16,7 +17,7 @@ public sealed class Inventory
 		}
 	}
 
-	public int Count(string itemId, bool isTotal)
+	public int Count(string itemId, bool isTotal = true)
 	{
 		Dictionary<string, int> hash = isTotal ? items : adds;
 		if (!hash.ContainsKey(itemId))
@@ -51,5 +52,56 @@ public sealed class Inventory
 			items[itemId] = quantity;
 		}
 		return isLarger;
+	}
+
+	public string GetNextState(string itemId)
+	{
+		if (Count(itemId) <= 0)
+		{
+			return "buy";
+		}
+		if (IsEquipped(itemId))
+		{
+			return "unequip";
+		}
+		return "equip";
+	}
+
+	public bool Buy(string itemId, int cost)
+	{
+		if (Count(coins) < cost)
+		{
+			return false;
+		}
+		Add(itemId, 1);
+		Add(coins, -cost);
+		return true;
+	}
+
+	public void Toggle(string itemId, string part, int cost)
+	{
+		if (Count(itemId) <= 0)
+		{
+			Buy(itemId, cost);
+			return;
+		}
+		if (!equips.ContainsKey(part) || equips[part] != itemId)
+		{
+			equips[part] = itemId;
+			return;
+		}
+		equips[part] = null;
+	}
+
+	public bool IsEquipped(string itemId)
+	{
+		foreach (var pair in equips)
+		{
+			if (pair.Value == itemId)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }
