@@ -4,8 +4,8 @@ Menus:
 - Fuel
 - Body
 - Nose
-- Exhaust
-- Wings
+- Nozzle
+- Fins
 
 Properties:
 - prefab

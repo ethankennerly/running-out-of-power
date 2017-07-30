@@ -14,6 +14,7 @@ public sealed class ShopMenu : MonoBehaviour
 		shop = Main.instance.shop;
 		index = transform.GetSiblingIndex();
 		button.onClick.AddListener(OpenMenu);
+		Update();
 	}
 
 	private void Update()

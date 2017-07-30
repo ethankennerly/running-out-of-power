@@ -19,6 +19,7 @@ public sealed class ShopTile : MonoBehaviour
 		shop = Main.instance.shop;
 		index = transform.GetSiblingIndex();
 		button.onClick.AddListener(Toggle);
+		Update();
 	}
 
 	private void Toggle()

@@ -17,7 +17,7 @@
 - [x] Convert distance into coins.
 - [x] Earn money for distance.
 - [x] Upgrade fuel.
-- [ ] Upgrade body density and color.  Glass.  Aluminum.
+- [x] Upgrade body density and color.  Glass.  Aluminum.
 - [ ] Upgrade nose cone:  angular drag and linear drag.
 - [ ] Upgrade fins:  angular drag and linear drag.
 - [ ] Upgrades:  Rocket image.
