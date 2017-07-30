@@ -13,13 +13,18 @@ public sealed class ShopMenu : MonoBehaviour
 	{
 		shop = Main.instance.shop;
 		index = transform.GetSiblingIndex();
-		Setup();
+		button.onClick.AddListener(OpenMenu);
 	}
 
-	private void Setup()
+	private void Update()
 	{
+		if (index >= shop.menuNames.Count)
+		{
+			gameObject.SetActive(false);
+			return;
+		}
+		gameObject.SetActive(true);
 		nameText.text = shop.menuNames[index];
-		button.onClick.AddListener(OpenMenu);
 	}
 
 	private void OpenMenu()
