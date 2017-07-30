@@ -8,6 +8,7 @@ public sealed class Fuel : MonoBehaviour
 	public float fuel = 0.5f;
 	public float forceRatio = 1.0f;
 	public float forceRatioIdle = 0.0f;
+	private float forceRatioNow = 0.0f;
 	private float baseFuel;
 	public float fuelRate = -1.0f;
 	public float fuelRateIdle = -0.01f;
@@ -69,8 +70,8 @@ public sealed class Fuel : MonoBehaviour
 
 	private void UpdateForce()
 	{
-		float efficiency = isEnabled ? forceRatio : forceRatioIdle;
-		relativeForce = efficiency * baseForce;
+		forceRatioNow = isEnabled ? forceRatio : forceRatioIdle;
+		relativeForce = forceRatioNow * baseForce;
 	}
 
 	private void UpdateParticles()
@@ -78,7 +79,7 @@ public sealed class Fuel : MonoBehaviour
 		if (particles != null)
 		{
 			ParticleSystem.EmissionModule emission = particles.emission;
-			emission.enabled = isEnabled;
+			emission.enabled = forceRatioNow > 0.1f;
 
 			ParticleSystem.SizeOverLifetimeModule size = particles.sizeOverLifetime;
 			size.enabled = true;

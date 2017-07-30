@@ -51,6 +51,22 @@ public sealed class Shop
 		fuel.prefab = fuelPart + "/Soda";
 		fuels.Add(fuel);
 
+		fuel = new Upgrade();
+		fuel.part = fuelPart;
+		fuel.name = "Gunpowder";
+		fuel.cost = 1000;
+		fuel.description = "Burns quick.";
+		fuel.prefab = fuelPart + "/Gunpowder";
+		fuels.Add(fuel);
+
+		fuel = new Upgrade();
+		fuel.part = fuelPart;
+		fuel.name = "Liquid oxygen";
+		fuel.cost = 10000;
+		fuel.description = "Space rocket fuel.";
+		fuel.prefab = fuelPart + "/LiquidOxygen";
+		fuels.Add(fuel);
+
 		menus.Add(fuelPart, fuels);
 		menuNames.Add(fuelPart);
 	}

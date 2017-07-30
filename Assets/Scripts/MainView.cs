@@ -4,6 +4,7 @@ public sealed class MainView : MonoBehaviour
 {
 	public GameObject result;
 	public CompleteCameraController cameraController;
+	public int cheatCoins = 0;
 
 	private void Start()
 	{
@@ -17,5 +18,7 @@ public sealed class MainView : MonoBehaviour
 	private void Update()
 	{
 		Main.instance.Update(Time.deltaTime);
+		Main.instance.inventory.Add(Main.instance.inventory.coins, cheatCoins);
+		cheatCoins = 0;
 	}
 }
