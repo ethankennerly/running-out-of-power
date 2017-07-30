@@ -2,9 +2,7 @@ using UnityEngine;
 
 public sealed class FuelSelector : MonoBehaviour
 {
-	public ParticleSystem particles;
-
-	public GameObject Replace()
+	public Fuel Replace()
 	{
 		Shop shop = Main.instance.shop;
 		Upgrade upgrade = shop.GetEquipped(shop.fuelPart);
@@ -21,7 +19,9 @@ public sealed class FuelSelector : MonoBehaviour
 			Destroy(child);
 			go.transform.SetParent(transform, false);
 		}
-		particles = go.GetComponentInChildren<ParticleSystem>();
-		return go;
+		Fuel fuel = go.GetComponent<Fuel>();
+		fuel.fuelObject = go;
+		fuel.particles = go.GetComponentInChildren<ParticleSystem>();
+		return fuel;
 	}
 }

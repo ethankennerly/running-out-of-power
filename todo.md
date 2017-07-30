@@ -31,6 +31,13 @@
 - [ ] Animate collecting coin with distance.
 - [ ] Skip off of ground.
 - [ ] Particles of thrust.
+- [ ] Sparks on landing.
+- [ ] Sounds.
+- [ ] Fit fuel to body.
+- [ ] Vertical (greater of horizontal or vertical).
+- [ ] Leave planet.
+- [ ] Leave solar system.
+- [ ] Leave galaxy.
 - [ ] Fireworks on landing.
 - [ ] Drone.
 - [ ] Rapid tap to thrust.

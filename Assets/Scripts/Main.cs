@@ -13,8 +13,7 @@ public sealed class Main
 	{
 		inventory.Setup();
 		shop.Setup();
-		input.thruster.fuelObject = fuel.Replace();
-		input.thruster.particles = fuel.particles;
+		input.thruster.fuel = fuel.Replace();
 		input.Setup();
 	}
 
