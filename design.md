@@ -1,19 +1,21 @@
 # Upgrades
 
+Menus:
 - Fuel
 - Body
 - Nose
 - Exhaust
 - Wings
 
-properties:
+Properties:
 - prefab
 - name
 - cost
 - description
 - icon?
+- component?
 
-prefab:
+Prefab:
 - collider
 - mass
 - linear drag

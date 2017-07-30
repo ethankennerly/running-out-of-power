@@ -26,6 +26,7 @@
 - [ ] Upgrade bursts.
 - [ ] Go pass clouds.
 - [ ] Upgrade mass.
+- [ ] Save, load, and reset inventory.
 - [ ] Animate collecting coin with distance.
 - [ ] Skip off of ground.
 - [ ] Particles of thrust.
