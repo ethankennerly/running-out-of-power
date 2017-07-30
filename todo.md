@@ -18,13 +18,14 @@
 - [x] Earn money for distance.
 - [x] Upgrade fuel.
 - [x] Upgrade body density and color.  Glass.  Aluminum.
-- [ ] Upgrade nose cone:  angular drag and linear drag.
-- [ ] Upgrade fins:  angular drag and linear drag.
+- [x] Upgrade nose cone:  linear drag.
+- [x] Upgrade fins:  cardboard has angular drag.
+- [x] Place ground and sky to left.
+- [ ] Upgrade nozzle:  Thrust efficiency.
+- [ ] Gimbal nozzle:  Tap to tilt direction.
 - [ ] Upgrades:  Rocket image.
 - [ ] Upgrade ramp:  Starting angle.
 - [ ] Upgrade engine:  Fuel efficiency.
-- [ ] Upgrade nozzle:  Thrust.
-- [ ] Gimbal nozzle:  Tap to tilt direction.
 - [ ] Upgrade fuel constant burn.
 - [ ] Upgrade bursts.
 - [ ] Go pass clouds.

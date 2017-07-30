@@ -16,6 +16,10 @@ public sealed class RocketSelector : MonoBehaviour
 
 		NoseSelector nose = GetComponentInChildren<NoseSelector>();
 		input.thruster.nose.body = nose.Replace();
+
+		FinSelector fin = GetComponentInChildren<FinSelector>();
+		input.thruster.fin.body = fin.Replace();
+
 		return input;
 	}
 }

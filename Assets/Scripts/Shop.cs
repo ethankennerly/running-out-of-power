@@ -2,8 +2,9 @@ using System.Collections.Generic;
 
 public sealed class Shop
 {
-	public string fuelPart = "Fuels";
 	public string bodyPart = "Bodies";
+	public string finPart = "Fins";
+	public string fuelPart = "Fuels";
 	public string nosePart = "Noses";
 
 	public string selectedMenu;
@@ -22,6 +23,7 @@ public sealed class Shop
 		AddFuelsMenu();
 		AddBodiesMenu();
 		AddNosesMenu();
+		AddFinsMenu();
 
 		inventory = Main.instance.inventory;
 	}
@@ -99,6 +101,31 @@ public sealed class Shop
 
 		menus.Add(nosePart, noses);
 		menuNames.Add(nosePart);
+	}
+
+	private void AddFinsMenu()
+	{
+		List<Upgrade> fins = new List<Upgrade>();
+		Upgrade fin;
+
+		fin = new Upgrade();
+		fin.part = finPart;
+		fin.name = "None";
+		fin.cost = 0;
+		fin.description = "Rotates easily.";
+		fin.prefab = finPart + "/None";
+		fins.Add(fin);
+
+		fin = new Upgrade();
+		fin.part = finPart;
+		fin.name = "Cardboard Fins";
+		fin.cost = 10;
+		fin.description = "Fins resist rotation.";
+		fin.prefab = finPart + "/Cardboard";
+		fins.Add(fin);
+
+		menus.Add(finPart, fins);
+		menuNames.Add(finPart);
 	}
 
 	public Upgrade GetEquipped(string part)

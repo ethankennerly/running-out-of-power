@@ -15,11 +15,15 @@ public sealed class Thruster
 
 	public Nose nose;
 
+	public Fin fin;
+
 	public void Setup()
 	{
 		fuel.Setup();
 		nose.connectedBody = body;
 		nose.Setup();
+		fin.connectedBody = body;
+		fin.Setup();
 	}
 
 	public void Update(float deltaTime)
