@@ -4,6 +4,7 @@ public sealed class Shop
 {
 	public string fuelPart = "Fuels";
 	public string bodyPart = "Bodies";
+	public string nosePart = "Noses";
 
 	public string selectedMenu;
 
@@ -20,6 +21,7 @@ public sealed class Shop
 		menus.Clear();
 		AddFuelsMenu();
 		AddBodiesMenu();
+		AddNosesMenu();
 
 		inventory = Main.instance.inventory;
 	}
@@ -72,6 +74,31 @@ public sealed class Shop
 
 		menus.Add(bodyPart, bodies);
 		menuNames.Add(bodyPart);
+	}
+
+	private void AddNosesMenu()
+	{
+		List<Upgrade> noses = new List<Upgrade>();
+		Upgrade nose;
+
+		nose = new Upgrade();
+		nose.part = nosePart;
+		nose.name = "Rubber Block";
+		nose.cost = 0;
+		nose.description = "Heavy. Blocks resist air.";
+		nose.prefab = nosePart + "/RubberBlock";
+		noses.Add(nose);
+
+		nose = new Upgrade();
+		nose.part = nosePart;
+		nose.name = "Cardboard Cone";
+		nose.cost = 10;
+		nose.description = "Cones flow through air.";
+		nose.prefab = nosePart + "/CardboardCone";
+		noses.Add(nose);
+
+		menus.Add(nosePart, noses);
+		menuNames.Add(nosePart);
 	}
 
 	public Upgrade GetEquipped(string part)

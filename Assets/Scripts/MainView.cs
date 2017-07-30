@@ -11,6 +11,7 @@ public sealed class MainView : MonoBehaviour
 		Main.instance.view = this;
 		Main.instance.Setup();
 		cameraController.player = Main.instance.input.gameObject;
+		cameraController.Setup();
 	}
 
 	private void Update()

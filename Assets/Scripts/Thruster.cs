@@ -13,9 +13,13 @@ public sealed class Thruster
 	public Rigidbody2D body;
 	public int distance = 0;
 
+	public Nose nose;
+
 	public void Setup()
 	{
 		fuel.Setup();
+		nose.connectedBody = body;
+		nose.Setup();
 	}
 
 	public void Update(float deltaTime)
