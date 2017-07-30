@@ -8,6 +8,7 @@ public sealed class Nozzle : MonoBehaviour
 	public Rigidbody2D connectedBody;
 
 	public float torqueMultiplier = 0.0f;
+	public float steeringMultiplier = 0.0f;
 	public float maxTorqueMultiplier = 0.0f;
 
 	private float degreePerTorqueMultiplier = 90.0f;
@@ -21,16 +22,21 @@ public sealed class Nozzle : MonoBehaviour
 		body.GetComponent<FixedJoint2D>().connectedBody = connectedBody;
 	}
 
+	public void Steer(float counterClockwise)
+	{
+		torqueMultiplier = counterClockwise * steeringMultiplier;
+		torqueMultiplier = Mathf.Clamp(torqueMultiplier, -maxTorqueMultiplier, maxTorqueMultiplier);
+	}
+
 	public void UpdateTime()
 	{
-		torqueMultiplier = Mathf.Clamp(torqueMultiplier, -maxTorqueMultiplier, maxTorqueMultiplier);
 		UpdateRotation(view);
 	}
 
 	private void UpdateRotation(GameObject gameObject)
 	{
 		Vector3 rotation = gameObject.transform.localEulerAngles;
-		rotation.z = torqueMultiplier * degreePerTorqueMultiplier;
+		rotation.z = -torqueMultiplier * degreePerTorqueMultiplier;
 		gameObject.transform.localEulerAngles = rotation;
 	}
 }

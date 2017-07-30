@@ -13,8 +13,8 @@ public sealed class InputController : MonoBehaviour
 
 	public void UpdateTime(float deltaTime)
 	{
-		thruster.isActive = Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space);
-		thruster.nozzle.torqueMultiplier = GetCounterClockwise();
+		thruster.isActive = Input.GetMouseButtonDown(0) || Input.anyKeyDown;
+		thruster.nozzle.Steer(GetCounterClockwise());
 		thruster.Update(deltaTime);
 	}
 

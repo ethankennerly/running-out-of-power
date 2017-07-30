@@ -22,12 +22,13 @@
 - [x] Upgrade fins:  cardboard has angular drag.
 - [x] Place ground and sky to left.
 - [x] Instructions to tap faster and upgrade.
-- [ ] Gimbal nozzle:  Tap up or down to tilt thrust.
+- [x] Gimbal nozzle:  Tap up or down to tilt thrust.
 - [ ] Upgrade nozzle:  Thrust efficiency.
 - [ ] Upgrade engine:  Fuel efficiency.
 - [ ] Upgrade fuel:  constant burn.
 - [ ] Upgrade fuel:  gunpowder bursts.
 - [ ] Upgrade body:  mass.
+- [ ] nozzle collider.
 - [ ] Upgrade ramp:  Starting angle length, and friction.
 - [ ] Obstacles which affect distance and mark milestone and scale.
 - [ ] Go pass clouds.

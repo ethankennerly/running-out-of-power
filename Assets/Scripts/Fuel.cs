@@ -22,11 +22,13 @@ public sealed class Fuel : MonoBehaviour
 
 	public GameObject fuelObject;
 	private Vector3 baseFuelScale;
+	private float baseParticleSizeMultiplier = 1.0f;
 
 	public void Setup()
 	{
 		baseFuel = fuel;
 		baseFuelScale = fuelObject.transform.localScale;
+		baseParticleSizeMultiplier = particles.sizeOverLifetime.sizeMultiplier;
 	}
 
 	public void UpdateTime(float deltaTime)
@@ -80,7 +82,7 @@ public sealed class Fuel : MonoBehaviour
 
 			ParticleSystem.SizeOverLifetimeModule size = particles.sizeOverLifetime;
 			size.enabled = true;
-			size.sizeMultiplier = forceRatio;
+			size.sizeMultiplier = forceRatio * baseParticleSizeMultiplier;
 		}
 	}
 }
