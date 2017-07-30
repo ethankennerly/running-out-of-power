@@ -21,16 +21,17 @@
 - [x] Upgrade nose cone:  linear drag.
 - [x] Upgrade fins:  cardboard has angular drag.
 - [x] Place ground and sky to left.
+- [x] Instructions to tap faster and upgrade.
+- [ ] Gimbal nozzle:  Tap up or down to tilt thrust.
 - [ ] Upgrade nozzle:  Thrust efficiency.
-- [ ] Gimbal nozzle:  Tap to tilt direction.
-- [ ] Upgrades:  Rocket image.
-- [ ] Upgrade ramp:  Starting angle.
 - [ ] Upgrade engine:  Fuel efficiency.
-- [ ] Upgrade fuel constant burn.
-- [ ] Upgrade bursts.
+- [ ] Upgrade fuel:  constant burn.
+- [ ] Upgrade fuel:  gunpowder bursts.
+- [ ] Upgrade body:  mass.
+- [ ] Upgrade ramp:  Starting angle length, and friction.
+- [ ] Obstacles which affect distance and mark milestone and scale.
 - [ ] Go pass clouds.
-- [ ] Upgrade mass.
-- [ ] Obstacles which affect distance.
+- [ ] Upgrades:  Rocket image.
 - [ ] Save, load, and reset inventory.
 - [ ] Animate collecting coin with distance.
 - [ ] Skip off of ground.
