@@ -8,6 +8,7 @@ public sealed class Inventory
 	public Dictionary<string, int> items = new Dictionary<string, int>();
 	public Dictionary<string, int> adds = new Dictionary<string, int>();
 	public Dictionary<string, string> equips = new Dictionary<string, string>();
+	public Dictionary<string, string> minimals = new Dictionary<string, string>();
 
 	public void Setup()
 	{
@@ -54,19 +55,6 @@ public sealed class Inventory
 		return isLarger;
 	}
 
-	public string GetNextState(string itemId)
-	{
-		if (Count(itemId) <= 0)
-		{
-			return "buy";
-		}
-		if (IsEquipped(itemId))
-		{
-			return "unequip";
-		}
-		return "equip";
-	}
-
 	public bool Buy(string itemId, int cost)
 	{
 		if (Count(coins) < cost)
@@ -78,19 +66,22 @@ public sealed class Inventory
 		return true;
 	}
 
-	public void Toggle(string itemId, string part, int cost)
+	public bool Toggle(string itemId, string part, int cost)
 	{
 		if (Count(itemId) <= 0)
 		{
-			Buy(itemId, cost);
-			return;
+			if (!Buy(itemId, cost))
+			{
+				return true;
+			}
 		}
 		if (!equips.ContainsKey(part) || equips[part] != itemId)
 		{
 			equips[part] = itemId;
-			return;
+			return true;
 		}
 		equips[part] = null;
+		return false;
 	}
 
 	public bool IsEquipped(string itemId)
@@ -103,5 +94,14 @@ public sealed class Inventory
 			}
 		}
 		return false;
+	}
+
+	public string GetEquipped(string part)
+	{
+		if (!equips.ContainsKey(part))
+		{
+			return null;
+		}
+		return equips[part];
 	}
 }

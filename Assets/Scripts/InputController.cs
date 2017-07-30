@@ -6,7 +6,7 @@ public sealed class InputController : MonoBehaviour
 	public GameObject result;
 	public Thruster thruster = new Thruster();
 
-	private void Start()
+	public void Setup()
 	{
 		thruster.body = GetComponent<Rigidbody2D>();
 		thruster.force = GetComponent<ConstantForce2D>();

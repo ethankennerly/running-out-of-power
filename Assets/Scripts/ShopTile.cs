@@ -4,27 +4,26 @@ using UnityEngine.UI;
 
 public sealed class ShopTile : MonoBehaviour
 {
-	public Shop shop;
-	public Inventory inventory;
 	public Text nameText;
 	public Text description;
 	public Text cost;
 	public Animator anim;
 	public Button button;
 	public int index = -1;
+
+	public Shop shop;
 	public Upgrade upgrade;
 
 	private void Start()
 	{
 		shop = Main.instance.shop;
-		inventory = Main.instance.inventory;
 		index = transform.GetSiblingIndex();
 		button.onClick.AddListener(Toggle);
 	}
 
 	private void Toggle()
 	{
-		inventory.Toggle(upgrade.name, upgrade.part, upgrade.cost);
+		shop.Toggle(upgrade);
 	}
 
 	private void Update()
@@ -40,6 +39,6 @@ public sealed class ShopTile : MonoBehaviour
 		nameText.text = upgrade.name;
 		description.text = upgrade.description;
 		cost.text = upgrade.cost.ToString();
-		anim.Play(inventory.GetNextState(upgrade.name));
+		anim.Play(shop.GetNextState(upgrade));
 	}
 }
