@@ -1,11 +1,14 @@
-public sealed class ShopInventory
+using System.Collections.Generic;
+
+public sealed class Shop
 {
 	public string fuelPart = "Fuel";
 
 	public string selectedMenu;
 
-	List <string> menuNames = new List<string>();
-	public List<List<Upgrade>> menus = new List<string, List<Upgrade>>();
+	public List <string> menuNames = new List<string>();
+
+	public Dictionary<string, List<Upgrade>> menus = new Dictionary<string, List<Upgrade>>();
 
 	public void Setup()
 	{
@@ -21,6 +24,6 @@ public sealed class ShopInventory
 		fuel.description = "Pressurized air in water.";
 		fuel.prefab = fuelPart + "/Soda";
 		fuels.Add(fuel);
-		menus.Add(fuels);
+		menus.Add(fuelPart, fuels);
 	}
 }

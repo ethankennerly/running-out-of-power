@@ -3,14 +3,15 @@ using UnityEngine.UI;
 
 public sealed class ShopTile : MonoBehaviour
 {
-	public ShopInventory shop;
+	public Shop shop;
 	public Inventory inventory;
-	public Text name;
+	public Text nameText;
 	public Text description;
 	public Text cost;
 	public Animator anim;
 	public Button button;
 	public int index = -1;
+	public Upgrade upgrade;
 
 	private void Start()
 	{
@@ -22,8 +23,8 @@ public sealed class ShopTile : MonoBehaviour
 
 	private void Setup()
 	{
-		Upgrade upgrade = shop.menus[selectedMenu][index];
-		name.text = upgrade.name;
+		upgrade = shop.menus[shop.selectedMenu][index];
+		nameText.text = upgrade.name;
 		description.text = upgrade.description;
 		cost.text = upgrade.cost.ToString();
 		button.onClick.AddListener(Toggle);
@@ -36,6 +37,6 @@ public sealed class ShopTile : MonoBehaviour
 
 	private void Update()
 	{
-		anim.Play(inventory.GetNextState());
+		anim.Play(inventory.GetNextState(upgrade.name));
 	}
 }

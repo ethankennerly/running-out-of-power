@@ -26,6 +26,7 @@
 - [ ] Upgrade bursts.
 - [ ] Go pass clouds.
 - [ ] Upgrade mass.
+- [ ] Obstacles which affect distance.
 - [ ] Save, load, and reset inventory.
 - [ ] Animate collecting coin with distance.
 - [ ] Skip off of ground.
