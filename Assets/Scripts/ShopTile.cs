@@ -32,10 +32,10 @@ public sealed class ShopTile : MonoBehaviour
 		List<Upgrade> upgrades = shop.menus[shop.selectedMenu];
 		if (index >= upgrades.Count)
 		{
-			gameObject.SetActive(false);
+			button.gameObject.SetActive(false);
 			return;
 		}
-		gameObject.SetActive(true);
+		button.gameObject.SetActive(true);
 		upgrade = upgrades[index];
 		nameText.text = upgrade.name;
 		description.text = upgrade.description;

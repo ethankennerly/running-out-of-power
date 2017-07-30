@@ -17,6 +17,8 @@ public sealed class Thruster
 
 	public Fin fin;
 
+	public Nozzle nozzle;
+
 	public void Setup()
 	{
 		fuel.Setup();
@@ -24,12 +26,16 @@ public sealed class Thruster
 		nose.Setup();
 		fin.connectedBody = body;
 		fin.Setup();
+		nozzle.particles = fuel.particles;
+		nozzle.connectedBody = body;
+		nozzle.Setup();
 	}
 
 	public void Update(float deltaTime)
 	{
 		fuel.isActive = isActive;
 		fuel.UpdateTime(deltaTime);
+		nozzle.UpdateTime();
 		UpdateIsExhausted();
 		UpdateForce();
 		distance = (int)body.position.magnitude;
@@ -40,6 +46,10 @@ public sealed class Thruster
 		if (fuel.isEnabled)
 		{
 			body.AddRelativeForce(fuel.relativeForce);
+			if (nozzle.torqueMultiplier != 0.0f)
+			{
+				body.AddTorque(nozzle.torqueMultiplier * fuel.relativeForce.magnitude);
+			}
 		}
 	}
 

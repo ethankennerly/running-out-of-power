@@ -20,6 +20,10 @@ public sealed class RocketSelector : MonoBehaviour
 		FinSelector fin = GetComponentInChildren<FinSelector>();
 		input.thruster.fin.body = fin.Replace();
 
+		NozzleSelector nozzleSelector = GetComponentInChildren<NozzleSelector>();
+		Nozzle nozzle = nozzleSelector.Replace();
+		input.thruster.nozzle = nozzle;
+
 		return input;
 	}
 }

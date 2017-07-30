@@ -21,10 +21,10 @@ public sealed class ShopMenu : MonoBehaviour
 	{
 		if (index >= shop.menuNames.Count)
 		{
-			gameObject.SetActive(false);
+			button.gameObject.SetActive(false);
 			return;
 		}
-		gameObject.SetActive(true);
+		button.gameObject.SetActive(true);
 		nameText.text = shop.menuNames[index];
 	}
 

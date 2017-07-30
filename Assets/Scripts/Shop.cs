@@ -6,6 +6,7 @@ public sealed class Shop
 	public string finPart = "Fins";
 	public string fuelPart = "Fuels";
 	public string nosePart = "Noses";
+	public string nozzlePart = "Nozzles";
 
 	public string selectedMenu;
 
@@ -24,6 +25,7 @@ public sealed class Shop
 		AddBodiesMenu();
 		AddNosesMenu();
 		AddFinsMenu();
+		AddNozzlesMenu();
 
 		inventory = Main.instance.inventory;
 	}
@@ -69,7 +71,7 @@ public sealed class Shop
 		body = new Upgrade();
 		body.part = bodyPart;
 		body.name = "Aluminum";
-		body.cost = 10;
+		body.cost = 20;
 		body.description = "Thin and light.";
 		body.prefab = bodyPart + "/Aluminum";
 		bodies.Add(body);
@@ -94,7 +96,7 @@ public sealed class Shop
 		nose = new Upgrade();
 		nose.part = nosePart;
 		nose.name = "Cardboard Cone";
-		nose.cost = 10;
+		nose.cost = 25;
 		nose.description = "Cones flow through air.";
 		nose.prefab = nosePart + "/CardboardCone";
 		noses.Add(nose);
@@ -119,13 +121,38 @@ public sealed class Shop
 		fin = new Upgrade();
 		fin.part = finPart;
 		fin.name = "Cardboard Fins";
-		fin.cost = 10;
+		fin.cost = 50;
 		fin.description = "Fins resist rotation.";
 		fin.prefab = finPart + "/Cardboard";
 		fins.Add(fin);
 
 		menus.Add(finPart, fins);
 		menuNames.Add(finPart);
+	}
+
+	private void AddNozzlesMenu()
+	{
+		List<Upgrade> nozzles = new List<Upgrade>();
+		Upgrade nozzle;
+
+		nozzle = new Upgrade();
+		nozzle.part = nozzlePart;
+		nozzle.name = "Bottleneck";
+		nozzle.cost = 0;
+		nozzle.description = "Sprays fuel.";
+		nozzle.prefab = nozzlePart + "/Bottleneck";
+		nozzles.Add(nozzle);
+
+		nozzle = new Upgrade();
+		nozzle.part = nozzlePart;
+		nozzle.name = "Gimbal";
+		nozzle.cost = 100;
+		nozzle.description = "Tap UP or DOWN to steer.";
+		nozzle.prefab = nozzlePart + "/Gimbal";
+		nozzles.Add(nozzle);
+
+		menus.Add(nozzlePart, nozzles);
+		menuNames.Add(nozzlePart);
 	}
 
 	public Upgrade GetEquipped(string part)
