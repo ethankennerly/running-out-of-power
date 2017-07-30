@@ -18,6 +18,7 @@ public sealed class Main
 		if (input.thruster.isExhaustedNow)
 		{
 			inventory.Add(inventory.coins, input.thruster.distance);
+			inventory.Upgrade(inventory.longest, input.thruster.distance);
 		}
 	}
 }

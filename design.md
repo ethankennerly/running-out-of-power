@@ -1,3 +1,27 @@
+# Upgrades
+
+- Fuel
+- Body
+- Nose
+- Exhaust
+- Wings
+
+properties:
+- prefab
+- name
+- cost
+- description
+- icon?
+
+prefab:
+- collider
+- mass
+- linear drag
+- angular drag
+- color
+- sprite
+- particles
+
 # Reference rocket games
 
 Learn 2 Fly 2

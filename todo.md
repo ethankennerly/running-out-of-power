@@ -14,7 +14,7 @@
 - [x] Read:  Tap quickly to propel.
 - [x] After stopped, read: distance.
 - [x] Fuel object offsets center of mass.
-- [ ] Convert distance into coins.
+- [x] Convert distance into coins.
 - [ ] Upgrade fuel.
 - [ ] Rocket image.
 - [ ] Upgrade angular drag and linear drag.

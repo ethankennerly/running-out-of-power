@@ -3,6 +3,7 @@ using System.Collections.Generic;
 public sealed class Inventory
 {
 	public string coins = "coins";
+	public string longest = "longest";
 
 	public Dictionary<string, int> items = new Dictionary<string, int>();
 	public Dictionary<string, int> adds = new Dictionary<string, int>();
@@ -27,11 +28,28 @@ public sealed class Inventory
 
 	public void Add(string itemId, int quantity)
 	{
-		UnityEngine.Debug.Log("Inventory.Add: " + quantity + " " + itemId);
+		if (!items.ContainsKey(itemId))
+		{
+			items[itemId] = 0;
+		}
 		items[itemId] += quantity;
 		if (quantity > 0)
 		{
 			adds[itemId] = quantity;
 		}
+	}
+
+	public bool Upgrade(string itemId, int quantity)
+	{
+		if (!items.ContainsKey(itemId))
+		{
+			items[itemId] = 0;
+		}
+		bool isLarger = items[itemId] < quantity;
+		if (isLarger)
+		{
+			items[itemId] = quantity;
+		}
+		return isLarger;
 	}
 }
