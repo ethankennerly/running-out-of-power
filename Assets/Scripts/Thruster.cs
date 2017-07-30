@@ -38,7 +38,7 @@ public sealed class Thruster
 		nozzle.UpdateTime();
 		UpdateIsExhausted();
 		UpdateForce();
-		distance = (int)body.position.magnitude;
+		distance = (int)body.position.x;
 	}
 
 	private void UpdateForce()
