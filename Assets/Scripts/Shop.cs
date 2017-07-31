@@ -92,6 +92,22 @@ public sealed class Shop
 		body.prefab = bodyPart + "/Aluminum";
 		bodies.Add(body);
 
+		body = new Upgrade();
+		body.part = bodyPart;
+		body.name = "Phenolic Polymer";
+		body.cost = 150;
+		body.description = "Fiber reinforced plastic.";
+		body.prefab = bodyPart + "/Phenolic";
+		bodies.Add(body);
+
+		body = new Upgrade();
+		body.part = bodyPart;
+		body.name = "Carbon Fiber";
+		body.cost = 2000;
+		body.description = "Aircraft quality.";
+		body.prefab = bodyPart + "/CarbonFiber";
+		bodies.Add(body);
+
 		menus.Add(bodyPart, bodies);
 		menuNames.Add(bodyPart);
 	}
@@ -115,6 +131,22 @@ public sealed class Shop
 		nose.cost = 25;
 		nose.description = "Cones flow through air.";
 		nose.prefab = nosePart + "/CardboardCone";
+		noses.Add(nose);
+
+		nose = new Upgrade();
+		nose.part = nosePart;
+		nose.name = "Pyrolytic Carbon";
+		nose.cost = 500;
+		nose.description = "Heat resistant.";
+		nose.prefab = nosePart + "/PyrolyticCarbon";
+		noses.Add(nose);
+
+		nose = new Upgrade();
+		nose.part = nosePart;
+		nose.name = "Dimethicone";
+		nose.cost = 5000;
+		nose.description = "Lubricated and heat resistant.";
+		nose.prefab = nosePart + "/Dimethicone";
 		noses.Add(nose);
 
 		menus.Add(nosePart, noses);
@@ -142,6 +174,22 @@ public sealed class Shop
 		fin.prefab = finPart + "/Cardboard";
 		fins.Add(fin);
 
+		fin = new Upgrade();
+		fin.part = finPart;
+		fin.name = "Polystyrene";
+		fin.cost = 350;
+		fin.description = "Light and sturdy.";
+		fin.prefab = finPart + "/Polystyrene";
+		fins.Add(fin);
+
+		fin = new Upgrade();
+		fin.part = finPart;
+		fin.name = "Titanium";
+		fin.cost = 8000;
+		fin.description = "Durable.";
+		fin.prefab = finPart + "/Titanium";
+		fins.Add(fin);
+
 		menus.Add(finPart, fins);
 		menuNames.Add(finPart);
 	}
@@ -165,6 +213,22 @@ public sealed class Shop
 		nozzle.cost = 100;
 		nozzle.description = "Tap UP or DOWN to steer.";
 		nozzle.prefab = nozzlePart + "/Gimbal";
+		nozzles.Add(nozzle);
+
+		nozzle = new Upgrade();
+		nozzle.part = nozzlePart;
+		nozzle.name = "Thrust Vectoring";
+		nozzle.cost = 1000;
+		nozzle.description = "Tap UP or DOWN to steer.";
+		nozzle.prefab = nozzlePart + "/ThrustVectoring";
+		nozzles.Add(nozzle);
+
+		nozzle = new Upgrade();
+		nozzle.part = nozzlePart;
+		nozzle.name = "Isomolded Graphite";
+		nozzle.cost = 6000;
+		nozzle.description = "Superfine grade.";
+		nozzle.prefab = nozzlePart + "/Graphite";
 		nozzles.Add(nozzle);
 
 		menus.Add(nozzlePart, nozzles);
