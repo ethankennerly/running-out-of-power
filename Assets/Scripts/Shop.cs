@@ -54,7 +54,7 @@ public sealed class Shop
 		fuel = new Upgrade();
 		fuel.part = fuelPart;
 		fuel.name = "Gunpowder";
-		fuel.cost = 1000;
+		fuel.cost = 800;
 		fuel.description = "Burns quick.";
 		fuel.prefab = fuelPart + "/Gunpowder";
 		fuels.Add(fuel);
@@ -62,7 +62,7 @@ public sealed class Shop
 		fuel = new Upgrade();
 		fuel.part = fuelPart;
 		fuel.name = "Liquid oxygen";
-		fuel.cost = 10000;
+		fuel.cost = 5000;
 		fuel.description = "Space rocket fuel.";
 		fuel.prefab = fuelPart + "/LiquidOxygen";
 		fuels.Add(fuel);
@@ -103,7 +103,7 @@ public sealed class Shop
 		body = new Upgrade();
 		body.part = bodyPart;
 		body.name = "Carbon Fiber";
-		body.cost = 2000;
+		body.cost = 1500;
 		body.description = "Aircraft quality.";
 		body.prefab = bodyPart + "/CarbonFiber";
 		bodies.Add(body);
@@ -144,7 +144,7 @@ public sealed class Shop
 		nose = new Upgrade();
 		nose.part = nosePart;
 		nose.name = "Dimethicone";
-		nose.cost = 5000;
+		nose.cost = 2000;
 		nose.description = "Lubricated and heat resistant.";
 		nose.prefab = nosePart + "/Dimethicone";
 		noses.Add(nose);
@@ -185,7 +185,7 @@ public sealed class Shop
 		fin = new Upgrade();
 		fin.part = finPart;
 		fin.name = "Titanium";
-		fin.cost = 8000;
+		fin.cost = 800;
 		fin.description = "Durable.";
 		fin.prefab = finPart + "/Titanium";
 		fins.Add(fin);
@@ -218,7 +218,7 @@ public sealed class Shop
 		nozzle = new Upgrade();
 		nozzle.part = nozzlePart;
 		nozzle.name = "Thrust Vectoring";
-		nozzle.cost = 1000;
+		nozzle.cost = 500;
 		nozzle.description = "Tap UP or DOWN to steer.";
 		nozzle.prefab = nozzlePart + "/ThrustVectoring";
 		nozzles.Add(nozzle);
@@ -226,7 +226,7 @@ public sealed class Shop
 		nozzle = new Upgrade();
 		nozzle.part = nozzlePart;
 		nozzle.name = "Isomolded Graphite";
-		nozzle.cost = 6000;
+		nozzle.cost = 2000;
 		nozzle.description = "Superfine grade.";
 		nozzle.prefab = nozzlePart + "/Graphite";
 		nozzles.Add(nozzle);
