@@ -12,7 +12,6 @@ public sealed class RocketSelector : MonoBehaviour
 
 		FuelSelector fuel = GetComponentInChildren<FuelSelector>();
 		input.thruster.fuel = fuel.Replace();
-		input.thruster.fuel.fuelObject.transform.SetParent(input.gameObject.transform, false);
 
 		NoseSelector nose = GetComponentInChildren<NoseSelector>();
 		input.thruster.nose.body = nose.Replace();
